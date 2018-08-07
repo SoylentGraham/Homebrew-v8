@@ -11,3 +11,24 @@ Useful links
 - Get SHA for new formula
   - https://stackoverflow.com/a/32753064/355753
   - `brew fetch ./v8-6.9.251.rb --build-from-source`
+
+
+Trying to build v8 from source
+=====================================
+- Install `depot_tools`...
+------------------------------
+- https://www.chromium.org/developers/how-tos/install-depot-tools
+- leads to http://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up
+- scrap that idea
+- Install `depot_tools` tap from someones formula: https://github.com/extap/homebrew-chromium
+- Fix error https://github.com/extap/homebrew-chromium/issues/1 a'la https://stackoverflow.com/questions/3939651/how-to-modify-a-homebrew-formula
+- run `gclient`, permission denied
+- `sudo chown -R "$USER":admin /usr/local/Cellar/depot_tools`
+- `chmod +x /usr/local/bin/gclient`
+- https://github.com/v8/v8/wiki/Building-from-Source
+- `gclient`
+- `fetch v8`
+- `chmod +x /usr/local/bin/fetch`
+- `fetch v8`
+- Follow rest of the page
+- `chmod +x /usr/local/bin/ninja`

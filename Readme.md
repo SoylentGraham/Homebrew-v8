@@ -32,3 +32,8 @@ Trying to build v8 from source
 - `fetch v8`
 - Follow rest of the page
 - `chmod +x /usr/local/bin/ninja`
+- `ninja -C out.gn/x64.release`
+- This builds `libv8_libbase.a` and `libv8_libplatform.a`, but missing a few symbols...
+- Modified `v8/gni/v8.gni`
+- Set `v8_static_library = true`
+- This builds a 1.3gb libv8_base.a (!) and all the others, but this fails to link with many missing symbols

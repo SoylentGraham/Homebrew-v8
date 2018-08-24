@@ -37,3 +37,4 @@ Trying to build v8 from source
 - Modified `v8/gni/v8.gni`
 - Set `v8_static_library = true`
 - This builds a 1.3gb libv8_base.a (!) and all the others, but this fails to link with many missing symbols
+- Trying `is_component_build=true` in `out.gn/x64.release/gn.args`

@@ -47,3 +47,4 @@ Trying to build for ARM/pi (as of 7.1.0!)
 - `ninja: error: '../../src/base/bits.cc', needed by 'obj/v8_libbase/bits.o', missing and no known rule to make it` because there's no compiler setup.
 - In `out.gn/arm.release/args.gn` change `target_cpu = "arm"`
 - https://desertbot.io/blog/how-to-cross-compile-for-raspberry-pi
+- Let's try and compile from a vm... `docker run -it -v ~/raspberry/hello:/build mitchallen/pi-cross-compile`

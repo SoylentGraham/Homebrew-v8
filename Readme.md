@@ -38,3 +38,12 @@ Trying to build v8 from source
 - Set `v8_static_library = true`
 - This builds a 1.3gb libv8_base.a (!) and all the others, but this fails to link with many missing symbols
 - Trying `is_component_build=true` in `out.gn/x64.release/gn.args`
+
+
+Trying to build for ARM/pi (as of 7.1.0!)
+=====================================
+- as desktop `tools/dev/v8gen.py arm.release`
+- `ninja -C out.gn/arm.release`
+- `ninja: error: '../../src/base/bits.cc', needed by 'obj/v8_libbase/bits.o', missing and no known rule to make it` because there's no compiler setup.
+- In `out.gn/arm.release/args.gn` change `target_cpu = "arm"`
+- https://desertbot.io/blog/how-to-cross-compile-for-raspberry-pi

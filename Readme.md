@@ -50,3 +50,4 @@ Trying to build for ARM/pi (as of 7.1.0!)
 - Let's try and compile from a vm... `docker run -it -v ~/raspberry/hello:/build mitchallen/pi-cross-compile`
 - docker needs same setup as osx cos of the build system
 - try setting up arm; https://groups.google.com/forum/#!topic/v8-users/27aetG4oayo export CC= etc
+- tools/dev/v8gen.py arm.release -- target_cpu=arm is_clang=false use_sysroot=false
